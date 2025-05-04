@@ -1,52 +1,37 @@
-# JSL02 Project Brief: Task Input and Status Validation System
+# Kanban Task Management
 
-## Important Prerequisite
+This project is a simple **Kanban Task Management** application that allows users to organize tasks into three categories: `TODO`, `DOING`, and `DONE`. It includes a script for dynamically capturing task details and filtering completed tasks.
 
-1. Before starting this challenge, ensure that you have **corrected your JSL01 project (HTML and CSS)** using the solution provided. This will help maintain consistency and ensure you build on a solid foundation.
-2. **Check the project user stories in your student dashboard**, make sure you understand what is required for each feature.
+## Features
 
-## Overview
+- **Task Input**: Users can input task details (title, description, and status) through prompts.
+- **Status Validation**: Ensures that the task status is one of the valid options: `todo`, `doing`, or `done`.
+- **Completed Task Filtering**: Automatically filters and displays tasks marked as `done`.
+- **Dynamic Console Output**: Displays completed tasks or a motivational message if no tasks are completed.
 
-This project involves implementing a JavaScript-based task entry system where users can input two tasks with complete details, ensuring data consistency and validation. The system will guide users through entering valid task titles, descriptions, and statuses, enforcing correct formatting while maintaining code clarity and maintainability.
+## How It Works
 
-## Key Objectives
+1. The script prompts the user to enter details for two tasks:
+   - **Title**: A short title for the task.
+   - **Description**: A brief description of the task.
+   - **Status**: The current status of the task (`todo`, `doing`, or `done`).
 
-### Logic & User Interaction
+2. The script validates the status input to ensure it matches one of the valid options.
 
-- Ensure the JavaScript file is correctly linked to the HTML document.
-- Prompt the user to enter details (title, description, status) for two separate tasks and store them in variables.
-- Convert all status inputs to lowercase automatically for consistency.
-- Validate the status input to allow only "todo", "doing", or "done" and repeatedly prompt the user until a valid status is entered.
-- Display the title and status of completed tasks (status: "done") in the console.
-- If no tasks are marked as "done", show a motivational message in the console: "No tasks completed, let's get to work!".
+3. After collecting the tasks, the script filters tasks with a status of `done` and logs them to the console.
 
-## Code Quality & Maintainability
+4. If no tasks are marked as `done`, the script logs a motivational message: `"no tasks completed, let's get to work!"`.
 
-- Use descriptive variable names to enhance readability and maintainability.
-- Include clear comments explaining complex logic and functionality for easier understanding.
+## File Structure
 
-## Expected Outcome
+- `Index.html`: The main HTML file containing the structure of the Kanban board.
+- `styles.css`: The CSS file for styling the application.
+- `script.js`: The JavaScript file for adding interactivity and task management functionality.
+- `assets/`: Contains images, icons, and other assets used in the project.
 
-A functional task entry system that ensures accurate data collection, validation, and structured storage while maintaining clean and well-documented code for easy future modifications.
+## How to Run
 
-**Prompt Input Example**
+1. Open the `Index.html` file in your browser to view the Kanban board layout.
+2. Open the browser's developer console to interact with the script.
+3. Follow the prompts to input task details and view the results in the console.
 
-- The program must prompt users for task 1 title, descrition and status inputs, it must do the same for task 2 information
-
-  ![title prompt](./explainer-images/title%20prompt.png)
-
-**Invalid status**
-
-- If the user enters a status other than `todo`, `doing` or `done`, the program must alert the user of this and return to prompting them to enter a status.
-
-  ![invalid status](./explainer-images/invalid%20status.png)
-
-**Console log**
-
-- When there is a completed task:
-
-  ![invalid status](./explainer-images/completed%20task%20log.png)
-
-- When there are no completed tasks:
-
-  ![invalid status](./explainer-images/no%20completed%20tasks%20log.png)

@@ -1,7 +1,7 @@
 // A function to get the title,description and status
 function getTaskDetails(taskNumber) {
-    let taskTitle = prompt('Enter title: ');
-    let taskDescription = prompt('Enter description: ');
+    let taskTitle = prompt('Enter title ${taskNumber}: ');
+    let taskDescription = prompt('Enter description ${taskNumber}: ');
     let taskStatus;
     const validStatuses = ['todo','doing','done'];
 
@@ -14,7 +14,7 @@ function getTaskDetails(taskNumber) {
             alert('Invalid status. Please enter todo, doing, done.');
         }
     }
-    
+
     while (!validStatuses.includes(taskStatus));
     return {
         title: taskTitle,
